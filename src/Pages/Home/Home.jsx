@@ -5,48 +5,47 @@ import { useLoaderData } from 'react-router-dom';
 import Card from './Card';
 import Footer from './Footer';
 import Blogs from './Blogs';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import Clinds from './Clinds';
 
 
 const Home = () => {
-    
-    const [serves,setserves]=useState([])
 
-    useEffect(()=>{
+
+    const [serves, setserves] = useState([])
+
+    useEffect(() => {
+        Aos.init()
+    }, [])
+
+    useEffect(() => {
         fetch('https://raw.githubusercontent.com/sadek1999/auth-1/main/public/data.json')
-        .then(res=>res.json())
-        .then(data=>setserves(data))
-    },[])
+            .then(res => res.json())
+            .then(data => setserves(data))
+    }, [])
     return (
         <div className=''>
             <Navbar></Navbar>
-            
+
             <Banner></Banner>
             <Blogs></Blogs>
-            <div className='mt-3 '>
-                <h1 className='p-2 text-center text-4xl font-semibold'>Our Services</h1>
+            <div data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                className='my-5 '>
+                <h1 className='p-2 text-center text-4xl font-semibold md:mb-6'>Our Services</h1>
+
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+                    {
+                        serves.map(Aserves => <Card key={Aserves.id} Aserves={Aserves}></Card>)
+                    }
+                </div>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-                {
-                    serves.map(Aserves=><Card key={Aserves.id} Aserves={Aserves}></Card>)
-                }
-            </div>
-            
-           
-            
-             
-               
-            
-            <div>
-                <h1 className='text-4xl font-bold uppercase text-center p-3'>Our lasts events</h1>
-            </div>
-            
-            <div>
-                <h1 className='text-4xl font-bold uppercase text-center p-3'>meet out team </h1>
-            </div>
-            
-            
+
+            <Clinds></Clinds>
+
             <Footer></Footer>
-            
+
         </div>
     );
 };

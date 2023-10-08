@@ -6,7 +6,7 @@ const Card = ({Aserves}) => {
     const{img,title,id,details}=Aserves;
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
+            <div  data-aos="flip-left"  data-aos-easing="ease-out-cubic"data-aos-duration="2000" className="card bg-base-100 shadow-xl">
             <figure><img className='h-56 w-full' src={img} alt="Shoes" /></figure>
             <div className=" space-y-3 p-2">
                 <h2 className="card-title">{title}</h2>
