@@ -3,7 +3,7 @@ import { useLoaderData,useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
 const ShowDetais = () => {
-    const cards=useLoaderData();
+    const cards=JSON.parse(useLoaderData());
     const {id}= useParams()
     const idint=parseInt(id);
     const card=cards.find(card=>card.id===idint)

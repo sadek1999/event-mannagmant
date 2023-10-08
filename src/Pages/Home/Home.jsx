@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './../Navbar/Navbar';
 import Banner from './Banner';
 import { useLoaderData } from 'react-router-dom';
@@ -8,10 +8,18 @@ import Blogs from './Blogs';
 
 
 const Home = () => {
-    const serves =useLoaderData()
+    
+    const [serves,setserves]=useState([])
+
+    useEffect(()=>{
+        fetch('https://raw.githubusercontent.com/sadek1999/auth-1/main/public/data.json')
+        .then(res=>res.json())
+        .then(data=>setserves(data))
+    },[])
     return (
-        <div className='space-y-3'>
+        <div className=''>
             <Navbar></Navbar>
+            
             <Banner></Banner>
             <Blogs></Blogs>
             <div className='mt-3 '>

@@ -19,8 +19,8 @@ const rouths =  createBrowserRouter([
       children:[
         {
           path:'/',
-          element:<Home></Home>,
-          loader:()=>fetch('data.json')
+          element:<Home></Home>
+         
         
         },
         {
@@ -34,17 +34,19 @@ const rouths =  createBrowserRouter([
         {
           path:'/show/:id',
           element:<Priivate><ShowDetais></ShowDetais></Priivate>,
-          loader:()=>fetch('data.json')
+          loader:()=>fetch('https://raw.githubusercontent.com/sadek1999/auth-1/main/public/data.json')
         
         },
         {
             path:'/about',
             element:<Aboutus></Aboutus>
+           
+            
         }
         ,
         {
             path:'/contact',
-            element:<Contact></Contact>
+            element:<Priivate><Contact></Contact></Priivate>
         }
        
         

@@ -35,7 +35,7 @@ const Navbar = () => {
                             <NavLink to="/singup">Sing up</NavLink>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl"><h1><img className='w-48' src="https://i.ibb.co/JsbP5xJ/images.png" alt="" /></h1></a>
+                  <h1 className='  normal-case text-xl'><img className=' w-36 ' src="https://i.ibb.co/JsbP5xJ/images.png" alt="" /></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-10 text-xl">

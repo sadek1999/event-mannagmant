@@ -1,6 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { authContext } from '../../shear/Auth/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  import { BsGoogle } from "react-icons/bs";
 
 
 const Singup = () => {
@@ -38,10 +41,22 @@ const Singup = () => {
 
         singup(email, password,name,profile)
             .then(result => {
+                toast.success('🦄 sing up successfully!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+
+
                 console.log('Successfully singup');
                 console.log(email, password, name, result);
                 seterror('');
-                navegat(location?.state? location.state:'/');
+                navegat(location?.state ? location.state : '/');
                
             })
             .catch(error => {
@@ -49,6 +64,9 @@ const Singup = () => {
                 seterror(error.message);
             });
 
+    }
+    const handlgoogle=e=>{
+        e.preventDefault();
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -58,7 +76,7 @@ const Singup = () => {
                    
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form className="card-body" onSubmit={handlSubmit}>
+                    <form className="px-8 pt-8" onSubmit={handlSubmit}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -95,9 +113,27 @@ const Singup = () => {
                             <button className="btn btn-primary">Sing up</button>
                         </div>
                     </form>
-                    <p>Have an account <span className='text-blue-600 font-bold'><Link to={'/login'}>Log in</Link></span></p>
+
+                    <div className='px-8 pb-8 pt-3 rounded-b-md'>
+                    <button onClick={handlgoogle} className="mb-4 btn btn-success text-white w-full"><BsGoogle></BsGoogle> Google</button>
+
+                    <p>Have an account <span className='text-blue-600 font-bold '><Link to={'/login'}>Log in</Link></span></p>
+                    </div>
+                    
                 </div>
             </div>
+            <ToastContainer
+                        position="top-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                    />
         </div>
     );
 };

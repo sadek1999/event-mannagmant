@@ -1,16 +1,16 @@
-import React from 'react';
-import { FaBeer, FaSlackHash } from 'react-icons/fa';
+
+import {  FaSlackHash } from 'react-icons/fa';
 import './Blogs.css'
 
 
 
 const Blogs = () => {
     return (
-        <div className=' w-full my-4 space-y-10'>
+        <div className=' w-full my-12 '>
             <h1 className=' text-4xl  uppercase font-semibold text-center p-3'>Welcome to <span className='text-[#FD6E0A] font-bold'>EMC</span> </h1>
-            <p className='text-center font-semibold text-xl'>From Wedding Functions to Birthday Parties or Corporate Events to Musical Functions,<br />
+            <p className='text-center font-semibold md:text-xl'>From Wedding Functions to Birthday Parties or Corporate Events to Musical Functions,<br />
                 We offer full range of Events Management Services that scale to your needs & budget.</p>
-            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:mt-12'>
                 
                  {/* canrd -1 */}
                 <div className='p-2'>

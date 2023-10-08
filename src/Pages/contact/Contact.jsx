@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="card card-compact w-full bg-green-400 shadow-xl">
+            <div className="card card-compact w-full bg-sky-900 shadow-xl">
                 
                 <div className="card-body items-center text-white">
                     <p className='text-4xl  '><ImOffice></ImOffice></p>
