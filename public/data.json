@@ -11,14 +11,14 @@
     "title": "Contest",
     "details": "Get ready for the Contest of a lifetime! Engage in thrilling challenges that test your skills and wit, all while vying for incredible prizes. This event promises an adrenaline-packed adventure, attracting competitive spirits and fun-loving enthusiasts alike. Whether you're a seasoned competitor or a newcomer, the Contest guarantees a day of excitement and memorable victories.",
     "img": "https://i.ibb.co/Br1ytB7/3.jpg",
-    "price": 5.50
+    "price": 5.504
   },
   {
     "id": 3,
     "title": "Science Fair",
     "details": "Embark on a scientific journey at the Science Fair, where you'll explore captivating exhibits, hands-on experiments, and groundbreaking discoveries. Dive into the world of innovation and wonder as you interact with experts and fellow enthusiasts. Perfect for all ages, the Science Fair promises an educational and awe-inspiring experience for everyone.",
     "img": "https://i.ibb.co/s6btfZV/2-1.jpg",
-    "price": 15.00
+    "price": 15.746
   },
   {
     "id": 4,
@@ -32,7 +32,7 @@
     "title": "Orientations",
     "details": "Navigate your academic journey confidently with Orientations. Learn about your program, meet professors, and connect with fellow students. Get ready to embark on a successful educational adventure with all the information and support you need.",
     "img": "https://i.ibb.co/KqTv6xS/6.jpg",
-    "price": 0.00
+    "price": 46.87
   },
   {
     "id": 6,
@@ -46,14 +46,14 @@
     "title": "Convocation",
     "details": "Celebrate your academic achievements with Convocation, a grand ceremony that marks the culmination of your educational journey. Join fellow graduates and take pride in your accomplishments. It's a momentous occasion filled with pride, joy, and the promise of a bright future.",
     "img": "https://i.ibb.co/k6XBXGS/neu-4f19sd87p.jpg",
-    "price": 20.00
+    "price": 20.764
   },
   {
     "id": 8,
     "title": "Picnic",
     "details": "Escape to the great outdoors with Picnic. Spend a relaxing day surrounded by nature, sharing delicious food and laughter with friends and family. Whether you're lounging by the lake or playing games in the park, this picnic promises a day of blissful serenity and camaraderie.",
     "img": "https://i.ibb.co/frsWmqL/7.jpg",
-    "price": 7.75
+    "price": 70.75
   }
  
 ]

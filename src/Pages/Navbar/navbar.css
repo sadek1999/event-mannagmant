@@ -1,3 +1,4 @@
-nav.a.active{
-    color: blue;
+nav a.active{
+    color:#FD6E0A;
+    text-decoration: underline;
 }

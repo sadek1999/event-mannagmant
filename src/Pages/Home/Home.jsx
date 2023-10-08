@@ -10,9 +10,10 @@ import Blogs from './Blogs';
 const Home = () => {
     const serves =useLoaderData()
     return (
-        <div>
+        <div className='space-y-3'>
             <Navbar></Navbar>
             <Banner></Banner>
+            <Blogs></Blogs>
             <div className='mt-3 '>
                 <h1 className='p-2 text-center text-4xl font-semibold'>Our Services</h1>
             </div>
@@ -21,10 +22,12 @@ const Home = () => {
                     serves.map(Aserves=><Card key={Aserves.id} Aserves={Aserves}></Card>)
                 }
             </div>
-            <div>
-                <h1 className='text-4xl font-bold uppercase text-center p-3'>how can we help you  </h1>
-                <Blogs></Blogs>
-            </div>
+            
+           
+            
+             
+               
+            
             <div>
                 <h1 className='text-4xl font-bold uppercase text-center p-3'>Our lasts events</h1>
             </div>

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../../shear/Auth/AuthProvider';
+import './navbar.css'
 
 
 const Navbar = () => {
@@ -14,30 +15,35 @@ const Navbar = () => {
                 console.error(error.message)
             })
     }
-    const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/About">About Us</NavLink></li>
-        <li><NavLink to="/blgos">Blogs</NavLink></li>
-        <li><NavLink to="/contact">Contact Us</NavLink></li>
-        <li><NavLink to="/singup">Sing up</NavLink></li>
-    </>
+    
+
     return (
         <nav>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
+
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            {links}
+                            {/* {links} */}
+                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/About">About </NavLink>
+                            
+                            <NavLink to="/contact">Contact </NavLink>
+                            <NavLink to="/singup">Sing up</NavLink>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">{name}</a>
+                    <a className="btn btn-ghost normal-case text-xl"><h1><img className='w-48' src="https://i.ibb.co/JsbP5xJ/images.png" alt="" /></h1></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        {links}
+                    <ul className="menu menu-horizontal px-1 gap-10 text-xl">
+                           <NavLink to="/">Home</NavLink>
+                            <NavLink to="/About">About Us</NavLink>
+                           
+                            <NavLink to="/contact">Contact </NavLink>
+                            <NavLink to="/singup">Sing up</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
