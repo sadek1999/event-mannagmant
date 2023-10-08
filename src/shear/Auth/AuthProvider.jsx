@@ -9,15 +9,22 @@ export const authContext=createContext(null)
 const AuthProvider = ({children}) => {
     const [user,setuser]=useState(null);
     const[loding,setloding]=useState(true)
+    const[name,setname]=useState('')
+    const[img,setimg]=useState('')
 
-    const singup=(email,password)=>{
+    const singup=(email,password,name,profile,)=>{
+        setimg(profile)
+        setname(name)
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const login=(email,password)=>{
+
         return signInWithEmailAndPassword(auth,email,password)
     }
     const logout=()=>{
+        setimg('')
+        setname('')
         return signOut(auth)
     }
      
@@ -32,6 +39,8 @@ const AuthProvider = ({children}) => {
     const authInfo={
         user,
         loding,
+        name,
+        img,
         singup ,
         login,
       logout

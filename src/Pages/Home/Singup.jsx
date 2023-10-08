@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link,  useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { authContext } from '../../shear/Auth/AuthProvider';
 
 
 const Singup = () => {
     const {singup}=useContext(authContext)
     const [error,seterror]=useState('')
+    const location=useLocation()
     const navegat=useNavigate()
     // const  special =/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/;
     
@@ -18,28 +19,29 @@ const Singup = () => {
         const email = form.get("email");
         const password = form.get('password');
         const name = form.get('name');
+        const profile=form.get('img')
         if (password.length < 6) {
             const message = 'Password should be at least 6 characters';
             return seterror(message);
         }
-        if (/[a-z]/.test(password)) {
+        
             if (!/[A-Z]/.test(password)) {
                 const message = "don't have a capital letter";
                 return seterror(message);
             }
 
-        }
+        
         // if (special.test(password)) {
         //     return seterror('ont have a special character');
         // }
         e.currentTarget.reset();
 
-        singup(email, password)
+        singup(email, password,name,profile)
             .then(result => {
                 console.log('Successfully singup');
                 console.log(email, password, name, result);
                 seterror('');
-                navegat('/');
+                navegat(location?.state? location.state:'/');
                
             })
             .catch(error => {
@@ -62,6 +64,12 @@ const Singup = () => {
                                 <span className="label-text">Name</span>
                             </label>
                             <input type="text" name='name' placeholder="Your name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Profile picture</span>
+                            </label>
+                            <input type="text" name='img' placeholder="img url" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

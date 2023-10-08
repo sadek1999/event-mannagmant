@@ -4,7 +4,7 @@ import { authContext } from '../../shear/Auth/AuthProvider';
 
 
 const Navbar = () => {
-    const { user, logout, login } = useContext(authContext)
+    const { user, logout, name, img } = useContext(authContext)
     const handllogout = () => {
         logout()
             .then(result => {
@@ -33,7 +33,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">{name}</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -41,15 +41,20 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {user&&
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <img src="https://i.ibb.co/z4n7L3N/girl2.jpg" />
-                    </div>
-                </label>
+                    {user ?
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img src={img} />
+                            </div>
+                        </label> :
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img src="https://i.ibb.co/z4n7L3N/girl2.jpg" />
+                            </div>
+                        </label>
 
                     }
-                    
+
                     {
                         user ? <div>
 

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useSearchParams,  } from 'react-router-dom';
+import { Link,   useLocation, useNavigate } from 'react-router-dom';
 
 import Navbar from '../Navbar/Navbar';
 import { authContext } from '../../shear/Auth/AuthProvider';
@@ -7,6 +7,9 @@ import { authContext } from '../../shear/Auth/AuthProvider';
 const Login = () => {
 const {login}=useContext(authContext)
 const [error,seterror]=useState('')
+const location=useLocation()
+console.log(location)
+const navigate=useNavigate()
 
     const handlSubmit=e=>{
         e.preventDefault();
@@ -17,8 +20,9 @@ const [error,seterror]=useState('')
         
         login(email,password)
         .then(result=>{
-            e.currentTarget.reset()
+            // e.currentTarget.reset()
             console.log('successfully login',result)
+            navigate(location?.state? location.state : '/');
         })
         .catch(error=>{
             console.error(error.message)
