@@ -32,7 +32,7 @@ const Navbar = () => {
                             <NavLink to="/About">About </NavLink>
                             
                             <NavLink to="/contact">Contact </NavLink>
-                            <NavLink to="/singup">Sing up</NavLink>
+                            <NavLink to="/singu">Sing up</NavLink>
                             
                         </ul>
                     </div>
@@ -44,11 +44,15 @@ const Navbar = () => {
                             <NavLink to="/About">About Us</NavLink>
                            
                             <NavLink to="/contact">Contact </NavLink>
-                            <NavLink to="/singup">Sing up</NavLink>
+                            <NavLink to="/singu">Sing up</NavLink>
                             
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    
+                    {
+                        name? <p className='text-xl font-bold sm:hidden md:mr-2'>{name}</p>:<p></p>
+                    }
                     {img ?
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
