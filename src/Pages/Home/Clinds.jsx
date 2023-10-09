@@ -16,15 +16,17 @@ const Clinds = () => {
                         <div className=" mx-auto  ">
                         <Marquee className=' ' pauseOnHover={true} speed={50} >
             
-            <img  className='rounded-full h-44 md:mx-8 ' src="https://i.ibb.co/4mNmcXW/university-education-logo-design-template-free-vector.jpg" alt="" />
+            <img  className='rounded-full h-28 mx-4 md:h-40 md:mx-8 ' src="https://i.ibb.co/4mNmcXW/university-education-logo-design-template-free-vector.jpg" alt="" />
         
-            <img className='rounded-full h-44 md:mx-8 ' src="https://i.ibb.co/gF5vvmV/pngtree-orange-round-simple-books-university-educational-logo-image-216186.jpg" alt="" />
+            <img className='rounded-full h-28 mx-4 md:h-40  md:mx-8 ' src="https://i.ibb.co/gF5vvmV/pngtree-orange-round-simple-books-university-educational-logo-image-216186.jpg" alt="" />
         
-            <img className='rounded-full h-44 md:mx-8 ' src="https://i.ibb.co/FhDSQc1/73848230-university-logo-design.jpg" alt="" />
+            <img className='rounded-full h-28 mx-4 md:h-40 md:mx-8 ' src="https://i.ibb.co/FhDSQc1/73848230-university-logo-design.jpg" alt="" />
              
-            <img className='rounded-full h-44 md:mx-8 ' src="https://i.ibb.co/4mNmcXW/university-education-logo-design-template-free-vector.jpg" alt="" />
+            <img className='rounded-full h-28 mx-4 md:h-40 md:mx-8 ' src="https://i.ibb.co/4mNmcXW/university-education-logo-design-template-free-vector.jpg" alt="" />
         
-            <img className='rounded-full h-44 md:mx-8' src="https://i.ibb.co/ZdymshR/74377645-university-logo-element.jpg" alt="" />
+            <img className='rounded-full h-28 mx-4 md:h-40 md:mx-8' src="https://i.ibb.co/ZdymshR/74377645-university-logo-element.jpg" alt="" />
+
+            <img className='rounded-full h-28 mx-4 md:h-40 md:mx-8 ' src="https://i.ibb.co/FhDSQc1/73848230-university-logo-design.jpg" alt="" />
             
             
           

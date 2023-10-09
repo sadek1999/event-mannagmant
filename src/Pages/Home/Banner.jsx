@@ -13,6 +13,9 @@ const Banner = () => {
                         <div className=" w-full h-96 lg:h-[500px] bg-[#00000080] flex items-center">
                             <div className="md:w-2/3 mx-auto  ">
                                 <h1 className="uppercase text-2xl md:text-6xl font-bold text-center text-white ">CELEBRATE YOUR EVENTSTHAT LASTS LONGER</h1>
+
+                                
+        
                                 
 
 

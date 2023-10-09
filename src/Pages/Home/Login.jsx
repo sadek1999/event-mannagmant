@@ -13,9 +13,12 @@ const Login = () => {
     const location = useLocation()
     
     const navigate = useNavigate()
+   
     const go=()=>{
         navigate(location?.state ? location.state : '/');
+
     }
+   
 
     const handlSubmit = e => {
         e.preventDefault();
@@ -27,9 +30,8 @@ const Login = () => {
 
         login(email, password)
             .then(result => {
-
-                toast.success('🦄 Login Successfully!', {
-                    position: "top-center",
+                toast.success(' Login Successfully !', {
+                    position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -37,10 +39,19 @@ const Login = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
+                    
                 });
+               
 
-                console.log('successfully login', result)
-                go()
+                setTimeout(() => {
+
+                    go()
+    
+                }, 6000);
+
+                
+               
+             
             })
             .catch(error => {
                 console.error(error.message)
@@ -53,8 +64,8 @@ const Login = () => {
         e.preventDefault()
         googlelogin()
         .then(result=>{
-            toast.success('🦄 Login Successfully!', {
-                position: "top-center",
+            toast.success(' Login Successfully !', {
+                position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -64,8 +75,12 @@ const Login = () => {
                 theme: "light",
             });
 
-            console.log('successfully login', result)
-            go();
+           
+            setTimeout(() => {
+
+                go()
+
+            }, 5000);
         })
         .catch(error => {
             console.error(error.message)
@@ -79,7 +94,7 @@ const Login = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold">Sing in now!</h1>
 
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
@@ -104,7 +119,7 @@ const Login = () => {
                             }
                             <div className="form-control mt-6 space-y-2">
 
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary">Sng in</button>
 
 
                             </div>
@@ -118,7 +133,7 @@ const Login = () => {
                     </div>
 
                     <ToastContainer
-                        position="top-center"
+                        position="top-right"
                         autoClose={5000}
                         hideProgressBar={false}
                         newestOnTop={false}

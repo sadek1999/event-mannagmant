@@ -33,6 +33,7 @@ const Navbar = () => {
                             
                             <NavLink to="/contact">Contact </NavLink>
                             <NavLink to="/singup">Sing up</NavLink>
+                            
                         </ul>
                     </div>
                   <h1 className='  normal-case text-xl'><img className=' w-36 ' src="https://i.ibb.co/JsbP5xJ/images.png" alt="" /></h1>
@@ -44,10 +45,11 @@ const Navbar = () => {
                            
                             <NavLink to="/contact">Contact </NavLink>
                             <NavLink to="/singup">Sing up</NavLink>
+                            
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {user ?
+                    {img ?
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img src={img} />
@@ -64,12 +66,12 @@ const Navbar = () => {
                     {
                         user ? <div>
 
-                            <button onClick={handllogout} className='btn'>log out</button>
+                            <button onClick={handllogout} className='btn'>Sing out</button>
 
                         </div> :
                             <div>
                                 <Link to={'/login'}>
-                                    <button className='btn'>Log in</button>
+                                    <button className='btn'>Sing in</button>
                                 </Link>
                             </div>
                     }

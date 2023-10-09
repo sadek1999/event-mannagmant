@@ -36,7 +36,7 @@ const Blogs = () => {
                 </div>
                 {/* canrd -2 */}
                 <div data-aos="fade-up"
-                    data-aos-duration="500"
+                    data-aos-duration="300"
                     data-aos-easing="ease-in-sine"
                     className='p-2'>
                     <div className='flex items-center gap-3 '>
