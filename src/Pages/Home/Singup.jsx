@@ -46,7 +46,7 @@ const Singup = () => {
        
        
         
-        if ( !special.test(password)) {
+        if ( special.test(password)) {
             console.log(password)
             return seterror("don't have a special character");
         }
