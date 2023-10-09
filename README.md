@@ -44,7 +44,7 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A?
 
 <i>Write your explanation here</i>
 
@@ -69,7 +69,7 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:C ?
 
 <i>Write your explanation here</i>
 
@@ -95,7 +95,7 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:A ?
 
 <i>Write your explanation here</i>
 
