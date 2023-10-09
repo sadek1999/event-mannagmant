@@ -44,9 +44,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i> this is an object but there is no value . so that show {} </i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer:C ?
+#### Answer:C 
 
-<i>Write your explanation here</i>
+<i> there are number + string  so that 1 and 2 but it is not equal to 12</i>
 
 </p>
 </details>
@@ -95,9 +95,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer:A ?
+#### Answer:A 
 
-<i>Write your explanation here</i>
+<i>Info take value from food but food can't take value from info</i>
 
 </p>
 </details>
@@ -150,7 +150,7 @@ console.log(count);
 
 #### Answer: 4 ?
 
-<i>Write your explanation here</i>
+<i>the if was true 3 time because 0 is a fulse value</i>
 
 </p>
 </details>
