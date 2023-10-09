@@ -11,8 +11,11 @@ const Login = () => {
     const { login ,googlelogin} = useContext(authContext)
     const [error, seterror] = useState('')
     const location = useLocation()
-    console.log(location)
+    
     const navigate = useNavigate()
+    const go=()=>{
+        navigate(location?.state ? location.state : '/');
+    }
 
     const handlSubmit = e => {
         e.preventDefault();
@@ -37,7 +40,7 @@ const Login = () => {
                 });
 
                 console.log('successfully login', result)
-                navigate(location?.state ? location.state : '/');
+                go()
             })
             .catch(error => {
                 console.error(error.message)
@@ -62,7 +65,7 @@ const Login = () => {
             });
 
             console.log('successfully login', result)
-            navigate(location?.state ? location.state : '/');
+            go();
         })
         .catch(error => {
             console.error(error.message)

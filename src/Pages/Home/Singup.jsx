@@ -7,10 +7,14 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 const Singup = () => {
-    const {singup}=useContext(authContext)
+    const {singup,googlelogin}=useContext(authContext)
     const [error,seterror]=useState('')
     const location=useLocation()
     const navegat=useNavigate()
+
+    const go=()=>{
+        navegat(location?.state ? location.state : '/');
+    }
     // const  special =/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/;
     
     
@@ -56,7 +60,8 @@ const Singup = () => {
                 console.log('Successfully singup');
                 console.log(email, password, name, result);
                 seterror('');
-                navegat(location?.state ? location.state : '/');
+                go()
+               
                
             })
             .catch(error => {
@@ -67,6 +72,26 @@ const Singup = () => {
     }
     const handlgoogle=e=>{
         e.preventDefault();
+        googlelogin()
+        .then(result=>{
+            toast.success('🦄 Login Successfully!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+
+            console.log('successfully login', result)
+            go();
+        })
+        .catch(error => {
+            console.error(error.message)
+            seterror(error.message)
+        })
     }
     return (
         <div className="hero min-h-screen bg-base-200">

@@ -16,7 +16,7 @@ const Contact = () => {
 
                     <div className=" w-full h-80  bg-[#000000A0] flex items-center ">
                         <div className=" mx-auto  ">
-                            <h1 className="uppercase text-4xl md:text-6xl font-bold text-center text-white border-b-2 pb-2 border-blue-600 ">Contract us</h1>
+                            <h1 className="uppercase text-4xl md:text-6xl font-bold text-center text-white border-b-2 pb-2 border-[#FD6E0A] ">Contract us</h1>
                         </div>
                     </div>
                 </div>
