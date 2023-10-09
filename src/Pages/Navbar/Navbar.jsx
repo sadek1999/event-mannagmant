@@ -51,7 +51,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     
                     {
-                        name? <p className='text-xl font-bold sm:hidden md:mr-2'>{name}</p>:<p></p>
+                        name? <p className='text-xl font-bold  md:mr-2'>{name}</p>:<p></p>
                     }
                     {img ?
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
